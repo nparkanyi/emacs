@@ -35,6 +35,9 @@
 			[?\C-a return ?\C-p])
 (global-set-key [C-return] 'insert-line-above)
 
+(fset 'insert-line-above-c
+      [?\C-a return ?\C-p tab])
+
 (fset 'insert-line-below
 			[?\C-e return])
 (global-set-key [M-return] 'insert-line-below)
@@ -48,4 +51,7 @@
 			(setq indent-tabs-mode t)
 			(setq tab-width 2)
 			(setq python-indent p)))
-		  
+
+(add-hook 'c-mode-hook
+          (lambda ()
+            (local-set-key [C-return] 'insert-line-above-c)))
