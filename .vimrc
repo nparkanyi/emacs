@@ -11,6 +11,7 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'klen/python-mode'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'scrooloose/nerdtree'
 
 " plugins must be added before here
 call vundle#end()
@@ -25,7 +26,9 @@ nmap <leader>k <C-U>
 nmap <leader>j <C-F>
 nmap <leader>m :!make <return>
 nmap <leader>r :!make run <return>
+map <leader>t :NERDTreeToggle<CR>
 " Opening and closing braces
 imap <C-F> {<CR>}<C-O>O
 
 let g:pymode_trim_whitespaces = 1
+let g:pymode_python= 'python3'
