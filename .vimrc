@@ -32,3 +32,6 @@ imap <C-F> {<CR>}<C-O>O
 
 let g:pymode_trim_whitespaces = 1
 let g:pymode_python= 'python3'
+let g:pymode_rope_complete_on_dot = 0
+
+set backspace=2
