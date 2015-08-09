@@ -25,6 +25,8 @@ set shiftwidth=2
 set softtabstop=2
 nmap <leader>k <C-U>
 nmap <leader>j <C-F>
+nmap J 15j
+nmap K 15k
 nmap <leader>m :!make <return>
 nmap <leader>r :!make run <return>
 map <leader>t :NERDTreeToggle<CR>
