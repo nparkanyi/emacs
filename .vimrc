@@ -16,6 +16,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'Valloric/YouCompleteMe'
 
 " plugins must be added before here
 call vundle#end()
