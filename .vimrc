@@ -35,6 +35,7 @@ nmap K 15k
 nmap <leader>m :!make <return>
 nmap <leader>r :!make run <return>
 map <leader>t :NERDTreeToggle<CR>
+map <F2> :!./run.sh<CR>
 " Opening and closing braces
 imap <C-F> {<CR>}<C-O>O
 
