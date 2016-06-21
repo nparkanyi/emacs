@@ -1,17 +1,15 @@
-if $COLORTERM == 'gnome-terminal'
-  set t_Co=256
-endif
-
 set nocompatible
 syntax on
 filetype off
+
 colorscheme jellybeans
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'scrooloose/nerdtree'
@@ -20,6 +18,8 @@ Plugin 'Valloric/YouCompleteMe'
 
 " plugins must be added before here
 call vundle#end()
+
+let g:airline_theme = 'jellybeans'
 
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
