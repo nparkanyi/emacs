@@ -2,7 +2,6 @@ set nocompatible
 syntax on
 filetype off
 
-colorscheme jellybeans
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -15,11 +14,13 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'flazz/vim-colorschemes'
 
 " plugins must be added before here
 call vundle#end()
 
-let g:airline_theme = 'jellybeans'
+let g:airline_theme = 'molokai'
+let g:airline_powerline_fonts = 1
 
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
@@ -49,3 +50,4 @@ endfunction
 
 autocmd BufNewFile *.{h,hpp} call <SID>insert_gates()
 set backspace=2
+colorscheme molokai
