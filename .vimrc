@@ -4,8 +4,6 @@ set expandtab
 set relativenumber
 set number
 
-colorscheme jellybeans
-
 let g:sneak#label = 1
 
 filetype plugin indent on
