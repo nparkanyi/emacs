@@ -3,6 +3,7 @@ set tabstop=4
 set expandtab
 set relativenumber
 set number
+set laststatus=2
 
 let g:sneak#label = 1
 
