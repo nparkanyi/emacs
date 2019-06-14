@@ -36,3 +36,6 @@ nmap <Space>w :w<CR>
 nmap <Space>ee :e 
 nmap <Space>et :tabe 
 nmap <Space>q :q<CR>
+
+"ut_switch integration
+noremap <Space>s :execute "mksession! " . $UTSESS <enter>
