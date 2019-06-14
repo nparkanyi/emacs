@@ -39,3 +39,8 @@ nmap <Space>q :q<CR>
 
 "ut_switch integration
 noremap <Space>s :execute "mksession! " . $UTSESS <enter>
+
+"cscope shortcuts
+nmap <Space>cg "zyiw:execute "cs find g " . @z<CR>
+nmap <Space>csg :sp<CR>:exe winnr('$') . "wincmd w"<CR>"zyiw:execute "cs find g " . @z<CR>
+nmap <Space>cvg :vs<CR>:exe winnr('$') . "wincmd w"<CR>"zyiw:execute "cs find g " . @z<CR>
