@@ -31,6 +31,10 @@ nmap <Space>tv :vs<CR>:exe winnr('$') . "wincmd w"<CR><C-]>
 nmap <Space>vv :vs<CR>:exe winnr('$') . "wincmd w"<CR>:e ~/.vimrc<CR>
 nmap <Space>vs :sp<CR>:exe winnr('$') . "wincmd w"<CR>:e ~/.vimrc<CR>
 
+"open TODO
+nmap <Space>Tv :vs<CR>:exe winnr('$') . "wincmd w"<CR>:e ~/TODO<CR>
+nmap <Space>Ts :sp<CR>:exe winnr('$') . "wincmd w"<CR>:e ~/TODO<CR>
+
 "saving/loading
 nmap <Space>w :w<CR>
 nmap <Space>ee :e 
@@ -41,6 +45,15 @@ nmap <Space>q :q<CR>
 noremap <Space>s :execute "mksession! " . $UTSESS <enter>
 
 "cscope shortcuts
+nmap <Space>ca :cs add .<CR>
 nmap <Space>cg "zyiw:execute "cs find g " . @z<CR>
 nmap <Space>csg :sp<CR>:exe winnr('$') . "wincmd w"<CR>"zyiw:execute "cs find g " . @z<CR>
 nmap <Space>cvg :vs<CR>:exe winnr('$') . "wincmd w"<CR>"zyiw:execute "cs find g " . @z<CR>
+
+nmap <Space>ct "zyiw:execute "cs find t " . @z<CR>
+nmap <Space>cst :sp<CR>:exe winnr('$') . "wincmd w"<CR>"zyiw:execute "cs find t " . @z<CR>
+nmap <Space>cvt :vs<CR>:exe winnr('$') . "wincmd w"<CR>"zyiw:execute "cs find t " . @z<CR>
+
+"insert mode completions
+inoremap <C-f> <C-x><C-f>
+inoremap <C-l> <C-x><C-o>
