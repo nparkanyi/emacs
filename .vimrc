@@ -8,6 +8,11 @@ set laststatus=2
 let g:sneak#label = 1
 
 filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
+
+"show tabs
+set list
+set listchars=tab:!·,trail:·
 
 "recursively search tags up directory tree
 set tags=tags;/
@@ -49,6 +54,12 @@ nmap <Space>ca :cs add .<CR>
 nmap <Space>cg "zyiw:execute "cs find g " . @z<CR>
 nmap <Space>csg :sp<CR>:exe winnr('$') . "wincmd w"<CR>"zyiw:execute "cs find g " . @z<CR>
 nmap <Space>cvg :vs<CR>:exe winnr('$') . "wincmd w"<CR>"zyiw:execute "cs find g " . @z<CR>
+nmap <Space>csc :sp<CR>:exe winnr('$') . "wincmd w"<CR>"zyiw:execute "cs find c " . @z<CR>
+nmap <Space>cvc :vs<CR>:exe winnr('$') . "wincmd w"<CR>"zyiw:execute "cs find c " . @z<CR>
+nmap <Space>css :sp<CR>:exe winnr('$') . "wincmd w"<CR>"zyiw:execute "cs find s " . @z<CR>
+nmap <Space>cvs :vs<CR>:exe winnr('$') . "wincmd w"<CR>"zyiw:execute "cs find s " . @z<CR>
+nmap <Space>cst :sp<CR>:exe winnr('$') . "wincmd w"<CR>"zyiw:execute "cs find t " . @z<CR>
+nmap <Space>cvt :vs<CR>:exe winnr('$') . "wincmd w"<CR>"zyiw:execute "cs find t " . @z<CR>
 
 nmap <Space>ct "zyiw:execute "cs find t " . @z<CR>
 nmap <Space>cst :sp<CR>:exe winnr('$') . "wincmd w"<CR>"zyiw:execute "cs find t " . @z<CR>
@@ -57,3 +68,5 @@ nmap <Space>cvt :vs<CR>:exe winnr('$') . "wincmd w"<CR>"zyiw:execute "cs find t 
 "insert mode completions
 inoremap <C-f> <C-x><C-f>
 inoremap <C-l> <C-x><C-o>
+
+set t_Co=256
