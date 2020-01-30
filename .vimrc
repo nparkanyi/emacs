@@ -1,3 +1,8 @@
+call plug#begin('~/.vim/plugged')
+Plug 'justinmk/vim-sneak'
+Plug 'tpope/vim-surround'
+call plug#end()
+
 set shiftwidth=4
 set tabstop=4
 set expandtab
