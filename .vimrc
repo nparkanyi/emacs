@@ -70,6 +70,10 @@ nmap <Space>ct "zyiw:execute "cs find t " . @z<CR>
 nmap <Space>cst :sp<CR>:exe winnr('$') . "wincmd w"<CR>"zyiw:execute "cs find t " . @z<CR>
 nmap <Space>cvt :vs<CR>:exe winnr('$') . "wincmd w"<CR>"zyiw:execute "cs find t " . @z<CR>
 
+"indentation modes
+nmap <Space>it :set noexpandtab<CR>
+nmap <Space>is :set expandtab<CR>
+
 "insert mode completions
 inoremap <C-f> <C-x><C-f>
 inoremap <C-l> <C-x><C-o>
