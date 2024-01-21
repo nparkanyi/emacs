@@ -29,14 +29,24 @@ nmap <F3> :tabn<CR>
 nmap <F10> :!make; ./run.sh<CR>
 
 "navigation by screenfuls
-function EnableScreenfulMappings()
-    nmap j <C-D>
-    nmap k <C-u>
-    nmap <Esc> :noremap j j<CR>:noremap k k<CR>
-    nmap <Space><Space> :noremap j j<CR>:noremap k k<CR>
+function DisableScreenfulMappings()
+    noremap j j
+    noremap k k
+    noremap <Space> <Space>
+    noremap <Space>j :call EnableScreenfulMappings()<CR><C-d>
+    noremap <Space>k :call EnableScreenfulMappings()<CR><C-u>
+    set timeoutlen=1000
 endfunction
-nmap <Space>j :call EnableScreenfulMappings()<CR><C-d>
-nmap <Space>k :call EnableScreenfulMappings()<CR><C-u>
+function EnableScreenfulMappings()
+    " For using <Space> to quit this mode. All multi-key mappings
+    " are essentially disabled.
+    set timeoutlen=0
+    noremap j <C-D>
+    noremap k <C-u>
+    noremap <Esc> :call DisableScreenfulMappings()<CR>
+    noremap <Space> :call DisableScreenfulMappings()<CR>
+endfunction
+call DisableScreenfulMappings()
 
 "tags navigation
 nmap <Space>td <C-]>
