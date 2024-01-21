@@ -5,6 +5,7 @@ call plug#end()
 
 set shiftwidth=4
 set tabstop=4
+" TODO per-project dir
 set expandtab
 set relativenumber
 set number
@@ -16,6 +17,7 @@ filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
 
 "show tabs
+"TODO per-project dir
 set list
 set listchars=tab:!·,trail:·
 
@@ -27,9 +29,14 @@ nmap <F3> :tabn<CR>
 nmap <F10> :!make; ./run.sh<CR>
 
 "navigation by screenfuls
-nmap <Space>j :exe 'nmap j <lt>C-d>'<CR>:exe 'nmap k <lt>C-u>'<CR><C-d>
-nmap <Space>k :exe 'nmap j <lt>C-d>'<CR>:exe 'nmap k <lt>C-u>'<CR><C-u>
-nmap <Space><Space> :noremap j j<CR>:noremap k k<CR>
+function EnableScreenfulMappings()
+    nmap j <C-D>
+    nmap k <C-u>
+    nmap <Esc> :noremap j j<CR>:noremap k k<CR>
+    nmap <Space><Space> :noremap j j<CR>:noremap k k<CR>
+endfunction
+nmap <Space>j :call EnableScreenfulMappings()<CR><C-d>
+nmap <Space>k :call EnableScreenfulMappings()<CR><C-u>
 
 "tags navigation
 nmap <Space>td <C-]>
