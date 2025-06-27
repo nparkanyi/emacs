@@ -109,3 +109,6 @@ nmap <Space>bicx :!build_libc -i x86_64<CR>
 autocmd BufNewFile,BufRead *.ci set filetype=c
 
 set t_Co=256
+
+" Use ripgrep
+set grepprg=rg\ --vimgrep\ $*
