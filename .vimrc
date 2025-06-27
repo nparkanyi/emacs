@@ -41,9 +41,8 @@ function EnableScreenfulMappings()
     " For using <Space> to quit this mode. All multi-key mappings
     " are essentially disabled.
     set timeoutlen=0
-    noremap j <C-D>
+    noremap j <C-d>
     noremap k <C-u>
-    noremap <Esc> :call DisableScreenfulMappings()<CR>
     noremap <Space> :call DisableScreenfulMappings()<CR>
 endfunction
 call DisableScreenfulMappings()
