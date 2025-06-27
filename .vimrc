@@ -78,4 +78,18 @@ nmap <Space>is :set expandtab<CR>
 inoremap <C-f> <C-x><C-f>
 inoremap <C-l> <C-x><C-o>
 
+"Build proc+libc
+nmap <Space>bpa :!build_proc aarch64<CR>
+nmap <Space>bca :!build_libc aarch64<CR>
+nmap <Space>bpx :!build_proc x86_64<CR>
+nmap <Space>bcx :!build_libc x86_64<CR>
+nmap <Space>bipa :!build_proc -i aarch64<CR>
+nmap <Space>bica :!build_libc -i aarch64<CR>
+nmap <Space>bipx :!build_proc -i x86_64<CR>
+nmap <Space>bicx :!build_libc -i x86_64<CR>
+
+
+"Treat .ci files as C source
+autocmd BufNewFile,BufRead *.ci set filetype=c
+
 set t_Co=256
