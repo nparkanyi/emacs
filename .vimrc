@@ -112,3 +112,5 @@ set t_Co=256
 
 " Use git grep
 set grepprg=git\ grep\ -n\ $*
+
+colorscheme evening
