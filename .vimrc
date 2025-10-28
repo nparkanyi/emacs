@@ -117,3 +117,5 @@ set t_Co=256
 set grepprg=git\ grep\ -n\ $*
 
 colorscheme evening
+" Uniform background between text and ~ lines past end-of-file.
+hi EndOfBuffer ctermbg=NONE
