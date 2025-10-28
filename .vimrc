@@ -1,3 +1,6 @@
+unlet! skip_defaults_vim
+source $VIMRUNTIME/defaults.vim
+
 call plug#begin('~/.vim/plugged')
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
