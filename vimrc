@@ -4,6 +4,7 @@ source $VIMRUNTIME/defaults.vim
 call plug#begin('~/.vim/plugged')
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-sleuth'
 call plug#end()
 
 set shiftwidth=4
@@ -19,10 +20,36 @@ let g:sneak#label = 1
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
 
-"show tabs
-"TODO per-project dir
-set list
 set listchars=tab:!·,trail:·
+function WhitespaceVisibility()
+    setlocal tabstop=4
+    if &expandtab
+        setlocal list
+    else
+        setlocal nolist
+    endif
+
+    highlight ExtraWhitespace ctermbg=red guibg=red
+    match ExtraWhitespace /\s\+$/
+endfunction
+
+" Extend the vim-sleuth hooks. I don't know a better way...
+function DoVimSleuth()
+    Sleuth
+    exe WhitespaceVisibility()
+endfunction
+
+let sleuth_automatic=0
+augroup my_sleuth
+  autocmd!
+  autocmd BufNewFile,BufReadPost * nested exe DoVimSleuth()
+  autocmd BufFilePost * nested
+        \ if @% !~# '^!' || exists('b:sleuth')
+        \ | exe DoVimSleuth() | endif
+augroup END
+
+autocmd InsertEnter * nested highlight clear ExtraWhitespace
+autocmd InsertLeave * nested highlight ExtraWhitespace ctermbg=red guibg=red
 
 "recursively search tags up directory tree
 set tags=tags;/
