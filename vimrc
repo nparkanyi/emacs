@@ -35,7 +35,7 @@ endfunction
 
 " Extend the vim-sleuth hooks. I don't know a better way...
 function DoVimSleuth()
-    Sleuth
+    silent! Sleuth
     exe WhitespaceVisibility()
 endfunction
 
