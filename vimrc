@@ -23,7 +23,7 @@ set omnifunc=syntaxcomplete#Complete
 set listchars=tab:!·,trail:·
 function WhitespaceVisibility()
     setlocal tabstop=4
-    if &expandtab
+    if &expandtab && (&filetype != 'help')
         setlocal list
     else
         setlocal nolist
