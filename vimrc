@@ -147,3 +147,6 @@ set grepprg=git\ grep\ -n\ $*
 colorscheme evening
 " Uniform background between text and ~ lines past end-of-file.
 hi EndOfBuffer ctermbg=NONE
+
+" Try to attach any cscope database
+silent! cs add .
