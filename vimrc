@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sleuth'
+Plug 'jasonccox/vim-wayland-clipboard'
 call plug#end()
 
 set shiftwidth=4
