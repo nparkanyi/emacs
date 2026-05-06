@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-fugitive'
 Plug 'jasonccox/vim-wayland-clipboard'
 call plug#end()
 
@@ -134,6 +135,7 @@ nmap <Space>bipa :!build_proc -i aarch64<CR>
 nmap <Space>bica :!build_libc -i aarch64<CR>
 nmap <Space>bipx :!build_proc -i x86_64<CR>
 nmap <Space>bicx :!build_libc -i x86_64<CR>
+nmap <Space>bu :!upload_proc<CR>
 
 
 "Treat .ci files as C source
