@@ -6,7 +6,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-fugitive'
-Plug 'jasonccox/vim-wayland-clipboard'
+"Plug 'jasonccox/vim-wayland-clipboard'
 call plug#end()
 
 set shiftwidth=4
