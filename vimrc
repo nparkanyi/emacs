@@ -99,6 +99,9 @@ nmap <Space>ee :e
 nmap <Space>et :tabe 
 nmap <Space>q :q<CR>
 
+"fuzzy find
+nmap <Space>fe :e `xterm -e 'fzf > /tmp/fzf_res'; cat /tmp/fzf_res`<CR>
+
 "ut_switch integration
 noremap <Space>s :execute "mksession! " . $UTSESS <enter>
 
