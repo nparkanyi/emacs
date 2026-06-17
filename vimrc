@@ -139,6 +139,7 @@ nmap <Space>bica :!build_libc -i aarch64<CR>
 nmap <Space>bipx :!build_proc -i x86_64<CR>
 nmap <Space>bicx :!build_libc -i x86_64<CR>
 nmap <Space>bu :!upload_proc<CR>
+nmap <Space>bt :!build_trace<CR>
 
 
 "Treat .ci files as C source
