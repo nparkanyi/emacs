@@ -144,14 +144,14 @@ nmap <Space>bu :!upload_proc<CR>
 "Treat .ci files as C source
 autocmd BufNewFile,BufRead *.ci set filetype=c
 
-set t_Co=256
-
 " Use git grep
 set grepprg=git\ grep\ -n\ $*
 
+" 24-bit colours
+set termguicolors
 colorscheme evening
 " Uniform background between text and ~ lines past end-of-file.
-hi EndOfBuffer ctermbg=NONE
+hi EndOfBuffer ctermfg=NONE guibg=NONE
 
 " Try to attach any cscope database
 silent! cs add .
