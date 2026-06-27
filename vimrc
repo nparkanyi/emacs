@@ -129,6 +129,9 @@ nmap <Space>is :set expandtab<CR>
 inoremap <C-f> <C-x><C-f>
 inoremap <C-l> <C-x><C-o>
 
+"quick escape; sorry Dijkstra...
+inoremap jk <Esc>
+
 "Build proc+libc
 nmap <Space>bpa :!build_proc aarch64<CR>
 nmap <Space>bca :!build_libc aarch64<CR>
