@@ -153,7 +153,7 @@ set grepprg=git\ grep\ -n\ $*
 
 " 24-bit colours
 set termguicolors
-colorscheme evening
+colorscheme desert
 " Uniform background between text and ~ lines past end-of-file.
 hi EndOfBuffer ctermfg=NONE guibg=NONE
 
